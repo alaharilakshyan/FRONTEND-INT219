@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: grid;
+            grid-template-columns: 5cm 25cm 5cm;
+            grid-template-rows: 2.5cm 15cm 2.5cm;
+            gap: 20px;
+ 
+        }
+        .d1{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background-color: brown;
+            color: white;
+            text-align: center;
+            align-content: center;
+        }
+        .d2{
+            background-color: darkblue;
+            color: white;
+            padding-left: 20px;
+        }
+
+        .d3{
+            background-color: chocolate;
+            color: white;
+            padding: 20px;
+        }
+        .d4{
+            background-color: darkgray;
+            color: white;
+            padding-right: 20px;
+        }
+
+        .d5{
+            background-color: forestgreen;
+            color: white;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            text-align: justify;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="d1">Header</div>
+        <div class="d2">Navigation</div>
+        <div class="d3">Main Content</div>
+        <div class="d4">SideBar</div>
+        <div class="d5">Footer</div>
+    </div>
+</body>
+</html>

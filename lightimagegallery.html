@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Gallery</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.3.0-beta.3/css/lightgallery.min.css">
+    <style>
+        #lightgallery {
+            max-width: 100%;
+            margin: 50px auto;
+        }
+        #lightgallery img {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="lightgallery">
+        <a href="imgs/gojo.jpg"><img src="imgs/gojo.jpg" alt="Image 1"></a>
+        <a href="imgs/miyamura.jpg"><img src="imgs/miyamura.jpg" alt="Image 2"></a>
+        <a href="imgs/car.jpg"><img src="imgs/car.jpg" alt="Image 3"></a>
+        <a href="imgs/horimiya.jpeg"><img src="imgs/horimiya.jpeg" alt="Image 4"></a>
+        <a href="imgs/megumi.jpg"><img src="imgs/megumi.jpg" alt="Image 5"></a>
+        <a href="imgs/lewis hamiliton.jpg"><img src="imgs/lewis hamiliton.jpg" alt="Image 7"></a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.3.0-beta.3/js/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.3.0-beta.3/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.3.0-beta.3/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script>
+        const gallery = lightGallery(document.getElementById('lightgallery'), {
+            selector: 'a',
+            download: false,
+            counter: false,
+            controls: true,
+            zoom: true,
+            closeOnTap: true,
+            plugins: [lgZoom, lgThumbnail]
+        });
+
+        document.addEventListener('click', function (e) {
+            const backdrop = document.querySelector('.lg-backdrop');
+            if (backdrop && backdrop.contains(e.target)) {
+                const lg = window.lgData && window.lgData['lightgallery'];
+                if (lg) lg.destroy(true);
+            }
+        });
+    </script>
+</body>
+</html>

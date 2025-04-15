@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        .calculator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .calculator div {
+            margin: 10px;
+        }
+
+        .calculator input {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <h1>Simple Calculator</h1>
+        <div>
+            <input type="number" id="num1" placeholder="Number 1">
+            <input type="number" id="num2" placeholder="Number 2">
+        </div>
+        <div>
+            <button onclick="add()">+</button>
+            <button onclick="subtract()">-</button>
+            <button onclick="multiply()">x</button>
+            <button onclick="divide()">/</button>
+        </div>
+        <div>
+            <input type="text" id="result" placeholder="Result" readonly>
+        </div>
+        <div>
+            <label for="colorPicker">Change Background Color:</label>
+            <input type="color" id="colorPicker" onchange="changeBackgroundColor()">
+        </div>
+        <script>
+            function add() {
+                let num1 = document.getElementById('num1').value;
+                let num2 = document.getElementById('num2').value;
+                let result = parseInt(num1) + parseInt(num2);
+                document.getElementById('result').value = result;
+            }
+
+            function subtract() {
+                let num1 = document.getElementById('num1').value;
+                let num2 = document.getElementById('num2').value;
+                let result = parseInt(num1) - parseInt(num2);
+                document.getElementById('result').value = result;
+            }
+
+            function multiply() {
+                let num1 = document.getElementById('num1').value;
+                let num2 = document.getElementById('num2').value;
+                let result = parseInt(num1) * parseInt(num2);
+                document.getElementById('result').value = result;
+            }
+
+            function divide() {
+                let num1 = document.getElementById('num1').value;
+                let num2 = document.getElementById('num2').value;
+                let result = parseInt(num1) / parseInt(num2);
+                document.getElementById('result').value = result;
+            }
+
+            function changeBackgroundColor() {
+                let color = document.getElementById('colorPicker').value;
+                document.body.style.backgroundColor = color;
+            }
+        </script>
+    </div>
+</body>
+
+</html>
+

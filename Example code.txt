@@ -1,0 +1,24 @@
+t<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Int 209</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Sr no</th>
+            <td>1</td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>Ritesh Sharma</td>
+        </tr>
+        <tr>
+            <th>Place</th>
+            <td>Haryana</td>
+        </tr>
+    </table>
+</body>
+</html>
